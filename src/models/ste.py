@@ -45,4 +45,6 @@ class StraightThroughEstimator(torch.autograd.Function):
         """
         # 论文 Fig 1E 策略：在 [-1, 1] 范围内梯度为 1，否则为 0
         # 这里简化为直接返回梯度，效果通常也很好
+
+        ### 逆向过程是“直接传递梯度-不进行任何修改”吗，难道不是“在 [-1, 1] 范围内梯度为 1，否则为 0”，查看论文中公式（4）
         return grad_output

@@ -37,6 +37,8 @@ class LogicUnit(nn.Module):
         # 初始化查找表权重
         # 每个组合对应一个可学习参数，初始化为随机高斯分布
         # 训练后，这些值会通过 Sigmoid 逼近 0 或 1，代表具体的逻辑功能 (如 AND, OR, XOR)
+
+        #### 确定前向过程的逻辑卷积是通过查表实现的吗？？
         self.lut_params = nn.Parameter(torch.randn(self.num_combinations))
         
     def forward(self, x):

@@ -9,6 +9,8 @@ from .logic_conv2d import LogicConv2d
 from .logic_unit import LogicUnit
 
 
+## 论文中所描述的空间和光谱复用“spatial encoding and spectral encoding”体现在哪里了，这个要确认一下，
+## 在当前的代码中没有看到，应该会非常影响模型的表达能力。
 class OLCNN(nn.Module):
     """
     光学逻辑卷积神经网络 (OLCNN)
