@@ -1,0 +1,11 @@
+# 核心依赖
+torch>=2.0.0
+ torchvision>=0.15.0
+
+# 工具库
+tqdm>=4.65.0
+pyyaml>=6.0
+numpy>=1.24.0
+
+# 可选依赖
+matplotlib>=3.7.0  # 用于可视化

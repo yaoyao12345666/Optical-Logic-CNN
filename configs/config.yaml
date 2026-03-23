@@ -1,0 +1,29 @@
+# 实验设置
+experiment_name: "OLCNN_Spectral_Full"
+seed: 42
+device: "cuda"  # 如果显存不足或没有显卡，改为 "cpu"
+
+# 数据设置
+dataset: "MNIST"
+data_root: "./data"
+batch_size: 64
+num_workers: 4  # Windows 下如果报错，可以尝试改为 0
+input_size: 9  # 光学输入固定为 9x9
+
+# 模型架构设置
+model:
+  num_classes: 10   # MNIST 是 10 类
+  num_spectral_channels: 16
+  use_spectral_encoding: true
+  use_ste: true
+
+# 训练设置
+training:
+  epochs: 50
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  scheduler: "cosine"  # 支持 "cosine" 或 "step"
+  
+# 日志与保存
+output_dir: "./outputs"
+save_freq: 5
